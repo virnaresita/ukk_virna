@@ -428,7 +428,7 @@ function deleteMember($nisnMember)
 function deleteAdmin($id)
 {
   global $connection;
-  $deletePeminjaman = "DELETE FROM peminjaman WHERE id = $id";
+  $deletePeminjaman = "DELETE FROM peminjaman WHERE id_user = $id";
   mysqli_query($connection, $deletePeminjaman);
   $deleteAdmin = "DELETE FROM user WHERE id = $id";
   mysqli_query($connection, $deleteAdmin);
